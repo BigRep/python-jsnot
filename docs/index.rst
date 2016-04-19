@@ -4,7 +4,7 @@ JSNOT - Python module
 .. toctree::
    :maxdepth: 2
 
-.. automodule:: jsnot
+.. automodule:: bigrep.jsnot
   :members:
   :private-members:
   :special-members:
