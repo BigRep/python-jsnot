@@ -1,0 +1,411 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JSNOT - Python module &mdash; JSNOT Python 0.0.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="JSNOT Python 0.0.1 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> JSNOT Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">JSNOT Python</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>JSNOT - Python module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="jsnot-python-module">
+<h1>JSNOT - Python module<a class="headerlink" href="#jsnot-python-module" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<span class="target" id="module-bigrep.jsnot"></span><p><strong>Convenient module to ease the use of JSON objects.</strong></p>
+<dl class="class">
+<dt id="bigrep.jsnot.JSNOT">
+<em class="property">class </em><code class="descclassname">bigrep.jsnot.</code><code class="descname">JSNOT</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A smarter JSON wrapper providing a number of convenient methods for
+faster access and manipulation of properties.</p>
+<p>It is excepted to initialize it with a JSON string or a filelike object
+containing the JSON data. It can also be initialized with any arbitrary
+type (thus the name JSNOT: NOT JSON!) in which case only <code class="docutils literal"><span class="pre">satisfy</span></code> and
+<code class="docutils literal"><span class="pre">cast</span></code> methods are usable.</p>
+<dl class="attribute">
+<dt id="bigrep.jsnot.JSNOT.DELIMITER_PATTERN">
+<code class="descname">DELIMITER_PATTERN</code><em class="property"> = '\\\\(?!\\\\[&quot;/bfnrtu])'</em><a class="headerlink" href="#bigrep.jsnot.JSNOT.DELIMITER_PATTERN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regex pattern used as delimiter for key sepeartion.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In JSON keys are not allowed to contain backslashes if it is not followed
+by one of the following characters:</p>
+<ul class="last simple">
+<li><code class="docutils literal"><span class="pre">&quot;</span></code> : quotation mark</li>
+<li><code class="docutils literal"><span class="pre">\</span></code> : backslash</li>
+<li><code class="docutils literal"><span class="pre">/</span></code> : forwardslash</li>
+<li><code class="docutils literal"><span class="pre">b</span></code> : backspace</li>
+<li><code class="docutils literal"><span class="pre">f</span></code> : formfeed</li>
+<li><code class="docutils literal"><span class="pre">n</span></code> : newline</li>
+<li><code class="docutils literal"><span class="pre">r</span></code> : carriage return</li>
+<li><code class="docutils literal"><span class="pre">t</span></code> : horizontal tab</li>
+<li><code class="docutils literal"><span class="pre">u</span></code> : 4 hexadecimal digits</li>
+</ul>
+</div>
+<dl class="docutils">
+<dt>See:</dt>
+<dd><a class="reference external" href="http://www.json.org/">http://www.json.org/</a></dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bigrep.jsnot.JSNOT.__dict__">
+<code class="descname">__dict__</code><em class="property"> = dict_proxy({'at_path': &lt;function at_path at 0x7f2e4149cb90&gt;, 'satisfy': &lt;function satisfy at 0x7f2e4149ccf8&gt;, '__module__': 'bigrep.jsnot', '__getitem__': &lt;function __getitem__ at 0x7f2e4149cde8&gt;, 'get': &lt;function get at 0x7f2e4149cc08&gt;, '__weakref__': &lt;attribute '__weakref__' of 'JSNOT' objects&gt;, '__str__': &lt;function __str__ at 0x7f2e4149ced8&gt;, 'cast': &lt;function cast at 0x7f2e4149cd70&gt;, '__repr__': &lt;function __repr__ at 0x7f2e4149ce60&gt;, '__dict__': &lt;attribute '__dict__' of 'JSNOT' objects&gt;, 'has': &lt;function has at 0x7f2e4149cc80&gt;, 'DELIMITER_PATTERN': '\\\\(?!\\\\[&quot;/bfnrtu])', '__doc__': 'A smarter JSON wrapper providing a number of convenient methods for\n    faster access and manipulation of properties.\n\n    It is excepted to initialize it with a JSON string or a filelike object\n    containing the JSON data. It can also be initialized with any arbitrary\n    type (thus the name JSNOT: NOT JSON!) in which case only ``satisfy`` and\n    ``cast`` methods are usable.\n    ', '__init__': &lt;function __init__ at 0x7f2e4149cb18&gt;})</em><a class="headerlink" href="#bigrep.jsnot.JSNOT.__dict__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.__getitem__">
+<code class="descname">__getitem__</code><span class="sig-paren">(</span><em>item</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.__getitem__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Item accessor on steroids: it also accepts backslash separated keys.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In JSON spec it is not allowed for key strings to contains backslashes.
+This fact is being used to have slashes as delimiters.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">JSNOT</span><span class="p">(</span><span class="s1">&#39;{&quot;test&quot;: {&quot;goes&quot;: {&quot;deep&quot;: true}, &quot;or&quot;: false}}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;test\goes\deep&#39;</span><span class="p">]</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>item</strong> (<em>str</em>) &#8211; backslash separated keys</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value of property given at backslash separated path.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes JSNOT.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> (<em>str|IOBase</em>) &#8211; string or filelike object containing JSON</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">JSNOT</span><span class="p">(</span><span class="s1">&#39;{&quot;test&quot;: {&quot;goes&quot;: {&quot;deep&quot;: &quot;19&quot;}, &quot;or&quot;: 20}}&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;test\goes\deep&#39;</span><span class="p">]</span> <span class="c1"># equals to j[&#39;test&#39;][&#39;goes&#39;][&#39;deep&#39;]</span>
+<span class="go">&quot;19&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">j</span><span class="o">.</span><span class="n">at_path</span><span class="p">(</span><span class="s1">&#39;test\goes\deep&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="go">19.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="bigrep.jsnot.JSNOT.__module__">
+<code class="descname">__module__</code><em class="property"> = 'bigrep.jsnot'</em><a class="headerlink" href="#bigrep.jsnot.JSNOT.__module__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.__repr__">
+<code class="descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.__str__">
+<code class="descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.__str__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="bigrep.jsnot.JSNOT.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#bigrep.jsnot.JSNOT.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.at_path">
+<code class="descname">at_path</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.at_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property accessor but with a JSNOT object returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) &#8211; backslash separated path to desired property</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value at given path wrapped in a JSNOT object</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">see also <code class="docutils literal"><span class="pre">satisfy</span></code>, <code class="docutils literal"><span class="pre">cast</span></code>, and <code class="docutils literal"><span class="pre">__getitem__</span></code> methods</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.cast">
+<code class="descname">cast</code><span class="sig-paren">(</span><em>typ</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.cast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Casts contents of current Request to desired type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>typ</strong> &#8211; desired type to cast to</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">casted value to desired type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>path</em>, <em>default</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves value at given path or provided default value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<em>str</em>) &#8211; desired path</li>
+<li><strong>default</strong> &#8211; default value if no value is avalable at path</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">value at given path if any, otherwise provided default value</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.has">
+<code class="descname">has</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.has" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verifies if a value exists under given path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>key</strong> (<em>str</em>) &#8211; backslash separated path to desired property</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if property exists otherwise False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="bigrep.jsnot.JSNOT.satisfy">
+<code class="descname">satisfy</code><span class="sig-paren">(</span><em>classinfo</em><span class="sig-paren">)</span><a class="headerlink" href="#bigrep.jsnot.JSNOT.satisfy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verifies if current value is an instance of given class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>classinfo</strong> &#8211; desired class</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if current value is an instance of given class</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><code class="xref py py-exc docutils literal"><span class="pre">TypeError</span></code> &#8211; if contents with Request are not of type classinfo</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Yan Foto, BigRep GmbH.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
